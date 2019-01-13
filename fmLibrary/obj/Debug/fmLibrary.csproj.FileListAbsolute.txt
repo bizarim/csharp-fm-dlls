@@ -1,5 +1,0 @@
-C:\Project\GIT\fm-sandbox\fm-dlls\fmLibrary\bin\Debug\fmLibrary.dll
-C:\Project\GIT\fm-sandbox\fm-dlls\fmLibrary\bin\Debug\fmLibrary.pdb
-C:\Project\GIT\fm-sandbox\fm-dlls\fmLibrary\obj\Debug\fmLibrary.csproj.CoreCompileInputs.cache
-C:\Project\GIT\fm-sandbox\fm-dlls\fmLibrary\obj\Debug\fmLibrary.dll
-C:\Project\GIT\fm-sandbox\fm-dlls\fmLibrary\obj\Debug\fmLibrary.pdb

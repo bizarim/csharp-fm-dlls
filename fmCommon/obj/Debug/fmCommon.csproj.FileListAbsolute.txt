@@ -1,6 +1,0 @@
-C:\Project\GIT\fm-sandbox\fm-dlls\fmCommon\bin\Debug\fmCommon.dll
-C:\Project\GIT\fm-sandbox\fm-dlls\fmCommon\bin\Debug\fmCommon.pdb
-C:\Project\GIT\fm-sandbox\fm-dlls\fmCommon\obj\Debug\fmCommon.csprojAssemblyReference.cache
-C:\Project\GIT\fm-sandbox\fm-dlls\fmCommon\obj\Debug\fmCommon.csproj.CoreCompileInputs.cache
-C:\Project\GIT\fm-sandbox\fm-dlls\fmCommon\obj\Debug\fmCommon.dll
-C:\Project\GIT\fm-sandbox\fm-dlls\fmCommon\obj\Debug\fmCommon.pdb
