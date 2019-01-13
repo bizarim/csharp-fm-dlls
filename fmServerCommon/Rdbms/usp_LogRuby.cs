@@ -8,7 +8,7 @@ namespace fmServerCommon
     //public class rdRubyLog
     //{
     //    public DateTime Time = fmServerTime.Epoch;
-    //    public PacketType Type = PacketType.PT_Unkwon;
+    //    public PacketType Type = eProtocolType.PT_Unkwon;
     //    public long AccId = 0;
     //    public int Amount = 0;
 
@@ -19,7 +19,7 @@ namespace fmServerCommon
     {
         public DateTime     i_dateTime      = fmServerTime.Epoch;
         public long         i_biAccId       = 0;
-        public PacketType   i_packetType    = PacketType.PT_Unkwon;
+        public eProtocolType i_eProtocolType = eProtocolType.PT_Unkwon;
         public int          i_nAmount       = 0;
 
         public int o_nResult = 999;
@@ -34,7 +34,7 @@ namespace fmServerCommon
             m_eExecuteMode = eExecuteMode.NonQuery;
 
             command.Parameters.AddWithValue("@i_dateTime", i_dateTime);
-            command.Parameters.AddWithValue("@i_packetType", i_packetType);
+            command.Parameters.AddWithValue("@i_packetType", i_eProtocolType);
             command.Parameters.AddWithValue("@i_biAccId", i_biAccId);
             command.Parameters.AddWithValue("@i_nAmount", i_nAmount);
 
@@ -52,7 +52,7 @@ namespace fmServerCommon
         {
             i_dateTime      = fmServerTime.Epoch;
             i_biAccId       = 0;
-            i_packetType    = PacketType.PT_Unkwon;
+            i_eProtocolType = eProtocolType.PT_Unkwon;
             i_nAmount       = 0;
         }
     }

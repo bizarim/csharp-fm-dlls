@@ -12,7 +12,7 @@ namespace fmServerCommon
 
         public eServerType GetServerType() { return m_eToServerType; }
 
-        public void SendPacket(fmPacket fp)
+        public void SendPacket(fmProtocol fp)
         {
             if (null == m_session) return;
             if (null == fp) return;

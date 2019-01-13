@@ -1,7 +1,5 @@
-﻿using System;
-
-namespace fmCommon.fmObject
-{
+﻿//namespace fmCommon.fmObject
+//{
     //public class testObjcet : fmObject
     //{
     //    public string m_strTest = "";
@@ -35,4 +33,4 @@ namespace fmCommon.fmObject
     //}
 
 
-}
+//}

@@ -10,7 +10,7 @@ namespace fmServerCommon
     public class DispatcherBase
     {
         protected appServer m_server;
-        protected Dictionary<PacketType, fnCreate> m_dicMessage = new Dictionary<PacketType, fnCreate>();
+        protected Dictionary<eProtocolType, fnCreate> m_dicMessage = new Dictionary<eProtocolType, fnCreate>();
 
         public DispatcherBase(appServer server)
         {
@@ -20,7 +20,7 @@ namespace fmServerCommon
 
         public IMessage AllocMessage(SessionBase session, Packet packet)
         {
-            PacketType type = packet.GetPacketType();
+            eProtocolType type = packet.GeteProtocolType();
 
             if (false == m_dicMessage.ContainsKey(type))
                 return null;
@@ -28,11 +28,11 @@ namespace fmServerCommon
             return m_dicMessage[type](session, packet);
         }
 
-        // fmPacket 초기화
+        // fmProtocol 초기화
         protected virtual void InitMessage()
         {
-            m_dicMessage.Add(PacketType.PT_Test_RQ, PT_Test_RQ);
-            m_dicMessage.Add(PacketType.PT_Test_RS, PT_Test_RS);
+            m_dicMessage.Add(eProtocolType.PT_Test_RQ, PT_Test_RQ);
+            m_dicMessage.Add(eProtocolType.PT_Test_RS, PT_Test_RS);
         }
 
         protected virtual IMessage PT_Test_RQ(SessionBase session, Packet packet) { return new MsgTestRQ(m_server, session, packet); }

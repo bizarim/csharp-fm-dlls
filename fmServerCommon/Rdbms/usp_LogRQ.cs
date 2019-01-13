@@ -8,7 +8,7 @@ namespace fmServerCommon
     public class usp_LogRQ : MySqlQuery
     {
         public DateTime i_dateTime = fmServerTime.Epoch;
-        public PacketType i_packetType = PacketType.PT_Unkwon;
+        public eProtocolType i_eProtocolType = eProtocolType.PT_Unkwon;
 
         public int o_nResult = 999;
 
@@ -22,7 +22,7 @@ namespace fmServerCommon
             m_eExecuteMode = eExecuteMode.NonQuery;
 
             command.Parameters.AddWithValue("@i_dateTime", i_dateTime);
-            command.Parameters.AddWithValue("@i_packetType", i_packetType);
+            command.Parameters.AddWithValue("@i_protocolType", i_eProtocolType);
 
             //command.Parameters.Add("@o_nResult", MySqlDbType.Int32).Direction = ParameterDirection.Output;
 
@@ -37,7 +37,7 @@ namespace fmServerCommon
         protected override void FreeParams()
         {
             i_dateTime = fmServerTime.Epoch;
-            i_packetType = PacketType.PT_Unkwon;
+            i_eProtocolType = eProtocolType.PT_Unkwon;
         }
     }
 }

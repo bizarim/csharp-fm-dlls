@@ -28,7 +28,7 @@ namespace fmServerCommon
         {
         }
 
-        public virtual void SendPacket(fmPacket fp)
+        public virtual void SendPacket(fmProtocol fp)
         {
             if (null == fp) return;
 

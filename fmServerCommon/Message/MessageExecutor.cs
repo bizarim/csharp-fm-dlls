@@ -73,7 +73,7 @@ namespace fmServerCommon
             msg = m_dispatcher.AllocMessage(session, packet);
             if (null == msg)
             {
-                Logger.Warn("Do not Dispatch: {0}", packet.GetPacketType());
+                Logger.Warn("Do not Dispatch: {0}", packet.GeteProtocolType());
                 return false;
             }
 
@@ -91,11 +91,11 @@ namespace fmServerCommon
             IMessage msg = m_dispatcher.AllocMessage(session, packet);
             if (null == msg)
             {
-                Logger.Warn("Do not Dispatch: {0}", packet.GetPacketType());
+                Logger.Warn("Do not Dispatch: {0}", packet.GeteProtocolType());
                 return;
             }
 
-            Logger.Debug("{0}", packet.GetPacketType());
+            Logger.Debug("{0}", packet.GeteProtocolType());
             Push(msg);
         }
     }

@@ -30,13 +30,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\MySql.Data.dll</HintPath>
+    <Reference Include="MySql.Data">
+      <HintPath>..\fmThirdparty\MySql.Data.dll</HintPath>
     </Reference>
-    <Reference Include="StackExchange.Redis, Version=1.0.316.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\StackExchange.Redis.1.0.488\lib\net45\StackExchange.Redis.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="StackExchange.Redis">
+      <HintPath>..\fmThirdparty\StackExchange.Redis.1.1.603\StackExchange.Redis.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -136,9 +134,6 @@
       <Project>{c77ccc92-9a93-450f-97e3-531ca53e8e47}</Project>
       <Name>fmLibrary</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

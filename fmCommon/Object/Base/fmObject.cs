@@ -9,43 +9,43 @@ namespace fmCommon
         // ICloneable 구현 하도록 인터페이스
     }
 
-    //public abstract class fmObject : IDisposable
-    //{
-    //    public delegate void fnFREE(fmObject _fmObject);
-    //    protected fnFREE m_fnFree = null;
-    //    public void SetFnFree(fnFREE fnFree) { m_fnFree = fnFree; }
+    public abstract class fmObject : IDisposable
+    {
+        public delegate void fnFREE(fmObject _fmObject);
+        protected fnFREE m_fnFree = null;
+        public void SetFnFree(fnFREE fnFree) { m_fnFree = fnFree; }
 
-    //    protected fmObject() { }
+        protected fmObject() { }
 
-    //    public void Dispose()
-    //    {
-    //        Dispose(true);
-    //        //GC.SuppressFinalize(this);
-    //    }
+        public void Dispose()
+        {
+            Dispose(true);
+            //GC.SuppressFinalize(this);
+        }
 
-    //    protected virtual void Dispose(bool disposing)
-    //    {
-    //        if (disposing)
-    //        {
-    //            Free();
-    //        }
-    //    }
+        protected virtual void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                Free();
+            }
+        }
 
-    //    ~fmObject()
-    //    {
-    //        Dispose(false);
-    //    }
+        ~fmObject()
+        {
+            Dispose(false);
+        }
 
-    //    private void Free()
-    //    {
-    //        if (m_fnFree != null)
-    //            m_fnFree(this);
-    //        else
-    //        {
-    //            throw new Exception(string.Format("Caution!! Use fmObjectPool: {0}", this.GetType().ToString()));
-    //        }
-    //    }
+        private void Free()
+        {
+            if (m_fnFree != null)
+                m_fnFree(this);
+            else
+            {
+                throw new Exception(string.Format("Caution!! Use fmObjectPool: {0}", this.GetType().ToString()));
+            }
+        }
 
-    //    protected abstract void Release();
-    //}
+        protected abstract void Release();
+    }
 }

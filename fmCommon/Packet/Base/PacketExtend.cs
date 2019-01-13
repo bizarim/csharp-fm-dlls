@@ -2,12 +2,11 @@
 
 namespace fmCommon
 {
-    public interface IPacketable
-    {
-        void Read(ref Packet p);
-        void Write(ref Packet p);
-    }
-
+    /// <summary>
+    /// PacketExtend
+    /// 목적:
+    ///     collection에서 Generic 하게 사용하기 위함
+    /// </summary>
     public static class PacketExtend
     {
         public static void Read(this List<eOption> list, ref Packet p)

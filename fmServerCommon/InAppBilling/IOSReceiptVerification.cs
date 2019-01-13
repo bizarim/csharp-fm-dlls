@@ -40,8 +40,8 @@ namespace fmServerCommon.InAppBilling
                 try { result = new IOSReceipt(post); }
                 catch (Exception ex)
                 {
-                    throw ex;
                     result = null;
+                    throw ex;
                 }
             }
 

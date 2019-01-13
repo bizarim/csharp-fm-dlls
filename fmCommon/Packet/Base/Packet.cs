@@ -2,6 +2,10 @@
 
 namespace fmCommon
 {
+    /// <summary>
+    /// Packet
+    /// 일반적인 Byte 버퍼
+    /// </summary>
     public class Packet : IDisposable
     {
         private bool m_disposed;
@@ -13,9 +17,9 @@ namespace fmCommon
         private static readonly int PACKET_SIZE_OFFSET = 0;      // 0 위치 읽는다.
         private static readonly int PACKET_TYPE_OFFSET = 4;      // 4 위치 읽는다.
 
-        private PacketType m_packetType = PacketType.PT_Unkwon;
-        public void SetPacketType(PacketType type) { m_packetType = type; }
-        public PacketType GetPacketType() { return m_packetType; }
+        private eProtocolType m_eProtocolType = eProtocolType.PT_Unkwon;
+        public void SeteProtocolType(eProtocolType type) { m_eProtocolType = type; }
+        public eProtocolType GeteProtocolType() { return m_eProtocolType; }
 
         private byte[] m_buffer;                                // buffer
         public byte[] GetBuffer() { return m_buffer; }
@@ -33,7 +37,7 @@ namespace fmCommon
             return m_nPacketLen;
         }
 
-        //public static implicit operator Packet(fmPacket fmp)
+        //public static implicit operator Packet(fmProtocol fmp)
         //{
         //    return new Packet(fmp);
         //}
@@ -63,23 +67,23 @@ namespace fmCommon
             WriteInt(HEADER_SIZE);
         }
 
-        public Packet(PacketType type)
+        public Packet(eProtocolType type)
         {
             m_nBufferPos = 0;
             m_nPacketLen = 0;
             m_buffer = new byte[BUFFER_SIZE];
             WriteInt(HEADER_SIZE);
             WriteInt((int)type);
-            SetPacketType(type);
+            SeteProtocolType(type);
         }
 
-        public Packet(fmPacket _fmPacket)
+        public Packet(fmProtocol _fmProtocol)
         {
             m_nBufferPos = 0;
             m_nPacketLen = 0;
             m_buffer = new byte[BUFFER_SIZE];
             WriteInt(HEADER_SIZE);
-            _fmPacket.Serialize(this);
+            _fmProtocol.Serialize(this);
         }
 
         public Packet(Packet p)
@@ -92,7 +96,7 @@ namespace fmCommon
 
         public Packet(byte[] buffer, int STARTPOS, int len)
         {
-            m_packetType = (PacketType)BitConverter.ToInt32(buffer, PACKET_TYPE_OFFSET + STARTPOS);
+            m_eProtocolType = (eProtocolType)BitConverter.ToInt32(buffer, PACKET_TYPE_OFFSET + STARTPOS);
             m_nBufferPos = 0;
             m_nPacketLen = 0;
             m_buffer = new byte[len];

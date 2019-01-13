@@ -1,0 +1,13 @@
+C:\Project\GIT\fm-sandbox\fm-dlls\fmServerCommon\bin\Debug\fmServerCommon.dll
+C:\Project\GIT\fm-sandbox\fm-dlls\fmServerCommon\bin\Debug\fmServerCommon.pdb
+C:\Project\GIT\fm-sandbox\fm-dlls\fmServerCommon\bin\Debug\fmCommon.dll
+C:\Project\GIT\fm-sandbox\fm-dlls\fmServerCommon\bin\Debug\fmLibrary.dll
+C:\Project\GIT\fm-sandbox\fm-dlls\fmServerCommon\bin\Debug\MySql.Data.dll
+C:\Project\GIT\fm-sandbox\fm-dlls\fmServerCommon\bin\Debug\StackExchange.Redis.dll
+C:\Project\GIT\fm-sandbox\fm-dlls\fmServerCommon\bin\Debug\fmCommon.pdb
+C:\Project\GIT\fm-sandbox\fm-dlls\fmServerCommon\bin\Debug\fmLibrary.pdb
+C:\Project\GIT\fm-sandbox\fm-dlls\fmServerCommon\obj\Debug\fmServerCommon.csprojAssemblyReference.cache
+C:\Project\GIT\fm-sandbox\fm-dlls\fmServerCommon\obj\Debug\fmServerCommon.csproj.CoreCompileInputs.cache
+C:\Project\GIT\fm-sandbox\fm-dlls\fmServerCommon\obj\Debug\fmServerCommon.csproj.CopyComplete
+C:\Project\GIT\fm-sandbox\fm-dlls\fmServerCommon\obj\Debug\fmServerCommon.dll
+C:\Project\GIT\fm-sandbox\fm-dlls\fmServerCommon\obj\Debug\fmServerCommon.pdb

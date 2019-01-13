@@ -11,7 +11,7 @@ namespace fmServerCommon
     public class rdRubyLog
     {
         public DateTime Time = fmServerTime.Epoch;
-        public PacketType Type = PacketType.PT_Unkwon;
+        public eProtocolType Type = eProtocolType.PT_Unkwon;
         public long AccId = 0;
         public int Amount = 0;
 

@@ -4,11 +4,8 @@ namespace fmCommon.Formula
 {
     public static partial class theFormula
     {
-        //public static int ExtraAtkChanceRate { get { return 1; } }
         public static int CrushingBlowRate { get { return 10; } }
         public static int SturnRate { get { return 8; } }
-        //public static int ExtraDMGToRareMon { get { return 15; } }
-        //public static int DMGReduceRate { get { return 10; } }
     }
 
     public static partial class theFormula
@@ -118,30 +115,16 @@ namespace fmCommon.Formula
 
         public static int GetExp(eRareLv rareLv, int lv, int extraLv, float rate)
         {
-            //int hit = (int)Math.Round(2.5f * lv);
-            //int inc = (int)Math.Round(lv * 0.15f * (int)rareLv * 10);
-            //int extra = extraLv * 28;
-            ////return (33 + hit + inc + extra);
-            //return (33 + hit + inc + extra) * 2;
-
             int nRareLv = (int)rareLv;
-
-            //int hit = (int)Math.Round(1.7 * lv);
-            //int inc = ((nRareLv - 1) * (nRareLv - 1) * nRareLv * lv);
-            //int extra = extraLv * 300;
             int inc = ((nRareLv - 1) * lv);
             int extra = extraLv * 100;
-
-            //return (33 + hit + inc + extra) * 2 * 10000;
             int exp = (int)Math.Round((33 + lv + inc + extra) * (1 + rate * 0.01) * 1.8);
-
             return exp;
         }
 
         public static int GetGold(float dropRate, eRareLv rareLv, int lv)
         {
             return (int)(((1 + dropRate * 0.01) * (((int)rareLv) * 0.5) * lv) + 45);
-            //return (int)(((1 + dropRate * 0.01) * (((int)rareLv) * 0.4) * 4 * lv) + 45);
         }
 
         public static int ModifyMissionExp(int lv, int exp)
@@ -154,166 +137,6 @@ namespace fmCommon.Formula
 
             return modifyExp <= 0 ? 1 : modifyExp;
         }
-
-
-        //public static int NeedRemeltStone(int itemLv, eBeyond beyond)
-        //{
-        //    if (beyond == eBeyond.None)
-        //    {
-        //        return 5;
-        //    }
-        //    else
-        //    {
-        //        if (itemLv <= 20)
-        //            return 1;
-        //        else if (20 < itemLv && itemLv <= 40)
-        //            return 2;
-        //        else
-        //            return 3;
-        //    }
-        //}
-
-        //public static int NeedRemeltGold(int itemLv, eBeyond beyond)
-        //{
-        //    if (beyond == eBeyond.None)
-        //    {
-        //        return 2000;
-        //    }
-        //    else
-        //    {
-        //        int gold = 100;
-        //        int cnt = 1;
-
-        //        if (itemLv <= 20)
-        //            cnt = 1;
-        //        else if (20 < itemLv && itemLv <= 40)
-        //            cnt = 2;
-        //        else
-        //            cnt = 3;
-
-        //        switch (cnt)
-        //        {
-        //            case 0: break;
-        //            case 1: gold = gold * (cnt + 1); break;
-        //            case 2: gold = gold * (cnt + 3); break;
-        //            case 3: gold = gold * (cnt + 5); break;
-        //            default:
-        //                break;
-        //        }
-
-        //        return gold;
-        //    }
-        //}
-
-        //public static int NeedRerollStone()
-        //{
-        //    return 1;
-        //    //if (lv <= 20) return 1;
-        //    //else if (20 < lv && lv <= 40) return 2;
-        //    //else return 3;
-        //}
-
-        //public static int NeedRerollGold(int optCnt)
-        //{
-        //    int gold = 200;
-        //    //return 200;
-        //    switch (optCnt)
-        //    {
-        //        case 0: break;
-        //        case 1: gold = gold * (optCnt + 3); break;
-        //        case 2: gold = gold * (optCnt + 7); break;
-        //        case 3: gold = gold * (optCnt + 13); break;
-        //        case 4: gold = gold * (optCnt + 21); break;
-        //        default:
-        //            break;
-        //    }
-
-        //    return gold;
-        //}
-
-        //public static int NeedRerollRuby(eGrade grade)
-        //{
-        //    int ruby = 0;
-        //    //return 200;
-        //    switch (grade)
-        //    {
-        //        case eGrade.None: break;
-        //        case eGrade.Normal: ruby = 1; break;
-        //        case eGrade.Magic: ruby = 2; break;
-        //        case eGrade.Rare: ruby = 3; break;
-        //        case eGrade.Epic: ruby = 4; break;
-        //        default:
-        //            break;
-        //    }
-
-        //    return ruby;
-        //}
-
-        //public static int RefreshSeal { get { return 2; } }
-        //public static int NeedEnchantStone()
-        //{
-        //    return 2;
-        //}
-
-        //public static int NeedEnchantGold(int optCnt)
-        //{
-        //    int gold = 300;
-        //    switch (optCnt)
-        //    {
-        //        case 0: break;
-        //        case 1: gold = gold * (optCnt + 3); break;
-        //        case 2: gold = gold * (optCnt + 7); break;
-        //        case 3: gold = gold * (optCnt + 13); break;
-        //        case 4: gold = gold * (optCnt + 21); break;
-        //        default:
-        //            break;
-        //    }
-
-        //    return gold;
-        //}
-
-        //public static int NeedEnchantRuby(eGrade grade)
-        //{
-        //    int ruby = 0;
-        //    switch (grade)
-        //    {
-        //        case eGrade.None: break;
-        //        case eGrade.Normal: ruby = 2; break;
-        //        case eGrade.Magic: ruby = 3; break;
-        //        case eGrade.Rare: ruby = 5; break;
-        //        case eGrade.Epic: ruby = 9; break;
-        //        default:
-        //            break;
-        //    }
-
-        //    return ruby;
-        //}
-
-        //public static int NeedSeal(eParts parts, int lv)
-        //{
-        //    int seal = 0;
-
-        //    if (lv <= 30)
-        //        seal = 2;
-        //    else if (30 < lv && lv <= 40)
-        //        seal = 4;
-        //    else if (40 < lv && lv <= 50)
-        //        seal = 6;
-        //    else if (50 < lv && lv <= 60)
-        //        seal = 8;
-        //    else if (60 < lv && lv <= 70)
-        //        seal = 10;
-
-
-        //    switch (parts)
-        //    {
-        //        case eParts.None: seal = seal / 2; break;
-        //        default:
-        //            break;
-        //    }
-
-        //    return seal;
-        //}
-
+        
     }
 }

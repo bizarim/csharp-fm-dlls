@@ -55,12 +55,12 @@ namespace fmServerCommon
     public class MsgTestRS : IMessage
     {
         Session m_session = null;
-        fmPacket m_fmPacket = null;
+        fmProtocol m_fmProtocol = null;
 
         public MsgTestRS(appServer server, SessionBase session, Packet packet)
         {
-            m_fmPacket = new PT_Test_RS();
-            m_fmPacket.Deserialize(packet);
+            m_fmProtocol = new PT_Test_RS();
+            m_fmProtocol.Deserialize(packet);
             m_session = session as Session;
         }
 
@@ -71,8 +71,8 @@ namespace fmServerCommon
         protected override void Release()
         {
             m_session = null;
-            m_fmPacket.Dispose();
-            m_fmPacket = null;
+            m_fmProtocol.Dispose();
+            m_fmProtocol = null;
         }
         public override void Exclude()
         {

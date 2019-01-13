@@ -8,7 +8,7 @@ namespace Compress
     {
         public LZ4_PT_GC_Broadcast_Public_NT()
         {
-            m_packetType = PacketType.PT_GC_Broadcast_Public_NT;
+            m_eProtocolType = eProtocolType.PT_GC_Broadcast_Public_NT;
         }
 
         protected override byte[] Compress(Packet p)
@@ -25,7 +25,7 @@ namespace Compress
     {
         public LZ4_PT_CG_Item_GetList_RS()
         {
-            m_packetType = PacketType.PT_CG_Item_GetList_RS;
+            m_eProtocolType = eProtocolType.PT_CG_Item_GetList_RS;
         }
 
         protected override byte[] Compress(Packet p)
@@ -40,7 +40,7 @@ namespace Compress
     //{
     //    public LZ4_PT_CG_Lord_EnterWorld_RS()
     //    {
-    //        m_packetType = PacketType.PT_CG_Lord_EnterWorld_RS;
+    //        m_eProtocolType = eProtocolType.PT_CG_Lord_EnterWorld_RS;
     //    }
 
     //    protected override byte[] Compress(Packet p)
@@ -55,7 +55,7 @@ namespace Compress
     //{
     //    public LZ4_PT_CG_Lord_CreateLord_RS()
     //    {
-    //        m_packetType = PacketType.PT_CG_Lord_CreateLord_RS;
+    //        m_eProtocolType = eProtocolType.PT_CG_Lord_CreateLord_RS;
     //    }
 
     //    protected override byte[] Compress(Packet p)
@@ -70,7 +70,7 @@ namespace Compress
     //{
     //    public LZ4_PT_CG_Explore_Search_RS()
     //    {
-    //        m_packetType = PacketType.PT_CG_Explore_Search_RS;
+    //        m_eProtocolType = eProtocolType.PT_CG_Explore_Search_RS;
     //    }
 
     //    protected override byte[] Compress(Packet p)
@@ -86,7 +86,7 @@ namespace Compress
     //{
     //    public LZ4_PT_CG_DHeart_Search_RS()
     //    {
-    //        m_packetType = PacketType.PT_CG_DHeart_Search_RS;
+    //        m_eProtocolType = eProtocolType.PT_CG_DHeart_Search_RS;
     //    }
 
     //    protected override byte[] Compress(Packet p)
@@ -102,7 +102,7 @@ namespace Compress
     //{
     //    public LZ4_PT_CG_Maze_Search_RS()
     //    {
-    //        m_packetType = PacketType.PT_CG_Maze_Search_RS;
+    //        m_eProtocolType = eProtocolType.PT_CG_Maze_Search_RS;
     //    }
 
     //    protected override byte[] Compress(Packet p)

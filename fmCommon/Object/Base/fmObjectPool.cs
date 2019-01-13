@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace fmCommon.fmObject
+namespace fmCommon
 {
     //public class fmObjectPool<T> where T : fmObject, new()
     //{

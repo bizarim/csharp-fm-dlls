@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace fmServerCommon
 {
-    public class PT_AC_Server_GetWorldList_RQ : fmPacket
+    public class PT_AC_Server_GetWorldList_RQ : fmProtocol
     {
-        public PT_AC_Server_GetWorldList_RQ() { m_packetType = PacketType.PT_AC_Server_GetWorldList_RQ; }
+        public PT_AC_Server_GetWorldList_RQ() { m_eProtocolType = eProtocolType.PT_AC_Server_GetWorldList_RQ; }
 
         public override void Serialize(Packet p)
         {
@@ -22,14 +22,14 @@ namespace fmServerCommon
         protected override void Reset() { }
     }
 
-    public class PT_AC_Server_GetWorldList_RS : fmPacket
+    public class PT_AC_Server_GetWorldList_RS : fmProtocol
     {
         public eErrorCode m_eErrorCode = eErrorCode.Error;
         public List<fmWorld> m_list = null;
 
         public PT_AC_Server_GetWorldList_RS()
         {
-            m_packetType = PacketType.PT_AC_Server_GetWorldList_RS;
+            m_eProtocolType = eProtocolType.PT_AC_Server_GetWorldList_RS;
             m_eErrorCode = eErrorCode.Error;
         }
 
@@ -75,14 +75,14 @@ namespace fmServerCommon
         }
     }
 
-    public class PT_CA_Server_GetWorldList_NT : fmPacket
+    public class PT_CA_Server_GetWorldList_NT : fmProtocol
     {
         public eErrorCode m_eErrorCode = eErrorCode.Error;
         public List<fmWorld> m_list = null;
 
         public PT_CA_Server_GetWorldList_NT()
         {
-            m_packetType = PacketType.PT_CA_Server_GetWorldList_NT;
+            m_eProtocolType = eProtocolType.PT_CA_Server_GetWorldList_NT;
         }
 
         public override void Serialize(Packet p)
@@ -127,9 +127,9 @@ namespace fmServerCommon
         }
     }
 
-    public class PT_Server_ReadyToStart_RQ : fmPacket
+    public class PT_Server_ReadyToStart_RQ : fmProtocol
     {
-        public PT_Server_ReadyToStart_RQ() { m_packetType = PacketType.PT_Server_ReadyToStart_RQ; }
+        public PT_Server_ReadyToStart_RQ() { m_eProtocolType = eProtocolType.PT_Server_ReadyToStart_RQ; }
 
         public override void Serialize(Packet p)
         {
@@ -146,13 +146,13 @@ namespace fmServerCommon
         protected override void Reset() { }
     }
 
-    public class PT_Server_ReadyToStart_RS : fmPacket
+    public class PT_Server_ReadyToStart_RS : fmProtocol
     {
         public eErrorCode m_eErrorCode;
 
         public PT_Server_ReadyToStart_RS()
         {
-            m_packetType = PacketType.PT_Server_ReadyToStart_RS;
+            m_eProtocolType = eProtocolType.PT_Server_ReadyToStart_RS;
             m_eErrorCode = eErrorCode.Error;
         }
 
@@ -180,14 +180,14 @@ namespace fmServerCommon
         }
     }
 
-    public class PT_Server_RegisterAtCenter_RQ : fmPacket
+    public class PT_Server_RegisterAtCenter_RQ : fmProtocol
     {
         public eServerType m_eServerType = eServerType.None;
         public int m_nSequence = 0;
         public string m_strIP = string.Empty;
         public int m_nPort = 0;
 
-        public PT_Server_RegisterAtCenter_RQ() { m_packetType = PacketType.PT_Server_RegisterAtCenter_RQ; }
+        public PT_Server_RegisterAtCenter_RQ() { m_eProtocolType = eProtocolType.PT_Server_RegisterAtCenter_RQ; }
 
         public override void Serialize(Packet p)
         {
@@ -211,13 +211,13 @@ namespace fmServerCommon
         protected override void Reset() { m_eServerType = eServerType.None; }
     }
 
-    public class PT_Server_RegisterAtCenter_RS : fmPacket
+    public class PT_Server_RegisterAtCenter_RS : fmProtocol
     {
         public eErrorCode m_eErrorCode;
 
         public PT_Server_RegisterAtCenter_RS()
         {
-            m_packetType = PacketType.PT_Server_RegisterAtCenter_RS;
+            m_eProtocolType = eProtocolType.PT_Server_RegisterAtCenter_RS;
             m_eErrorCode = eErrorCode.Error;
         }
 
@@ -245,14 +245,14 @@ namespace fmServerCommon
         }
     }
 
-    public class PT_Server_UpdateWorldState_NT : fmPacket
+    public class PT_Server_UpdateWorldState_NT : fmProtocol
     {
         public eServerType m_eServerType = eServerType.None;
         public int m_nSequence = 0;
         public int m_nPlayerCount = 0;
         //public eWorldState m_eWorldState = eWorldState.Check;
 
-        public PT_Server_UpdateWorldState_NT() { m_packetType = PacketType.PT_Server_UpdateWorldState_NT; }
+        public PT_Server_UpdateWorldState_NT() { m_eProtocolType = eProtocolType.PT_Server_UpdateWorldState_NT; }
 
         public override void Serialize(Packet p)
         {
@@ -276,7 +276,7 @@ namespace fmServerCommon
         protected override void Reset() { m_eServerType = eServerType.None; }
     }
 
-    public class PT_Server_RegisterAtChat_RQ : fmPacket
+    public class PT_Server_RegisterAtChat_RQ : fmProtocol
     {
         public eServerType m_eServerType = eServerType.None;
         public int m_nSequence = 0;
@@ -285,7 +285,7 @@ namespace fmServerCommon
 
         public PT_Server_RegisterAtChat_RQ()
         {
-            m_packetType = PacketType.PT_Server_RegisterAtChat_RQ;
+            m_eProtocolType = eProtocolType.PT_Server_RegisterAtChat_RQ;
         }
 
         public override void Serialize(Packet p)
@@ -310,13 +310,13 @@ namespace fmServerCommon
         protected override void Reset() { m_eServerType = eServerType.None; }
     }
 
-    public class PT_Server_RegisterAtChat_RS : fmPacket
+    public class PT_Server_RegisterAtChat_RS : fmProtocol
     {
         public eErrorCode m_eErrorCode = eErrorCode.Error;
 
         public PT_Server_RegisterAtChat_RS()
         {
-            m_packetType = PacketType.PT_Server_RegisterAtChat_RS;
+            m_eProtocolType = eProtocolType.PT_Server_RegisterAtChat_RS;
         }
 
         public override void Serialize(Packet p)

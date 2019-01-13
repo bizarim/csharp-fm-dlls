@@ -5,8 +5,8 @@ namespace fmServerCommon
 {
     public class fmLogAct
     {
-        public DateTime     Time { get; set; }
-        public PacketType   PType { get; set; }
+        public DateTime         Time { get; set; }
+        public eProtocolType    PType { get; set; }
 
         public long AccId   { get; set; }
         public int  Lv      { get; set; }
