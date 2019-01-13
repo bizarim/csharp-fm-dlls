@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3C2DB9CD-6312-4F18-AF5D-A185E27EDEE0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>fmCommon</RootNamespace>
+    <AssemblyName>fmCommon</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Battle\Base\IBattleProcess.cs" />
+    <Compile Include="Battle\Base\IBattleUnit.cs" />
+    <Compile Include="Battle\fmBattleUnit.cs" />
+    <Compile Include="Battle\fmReplay.cs" />
+    <Compile Include="Battle\fmStats.cs" />
+    <Compile Include="Battle\fmTbAttack.cs" />
+    <Compile Include="Battle\fmBattleLord.cs" />
+    <Compile Include="Battle\fmBattleMonster.cs" />
+    <Compile Include="Battle\fmPvpProcess.cs" />
+    <Compile Include="Battle\fmBattleProcess.cs" />
+    <Compile Include="Battle\fmAbility.cs" />
+    <Compile Include="DataRedis\rdEnchantList.cs" />
+    <Compile Include="DataRedis\rdInDun.cs" />
+    <Compile Include="DataRedis\rdItem.cs" />
+    <Compile Include="DataRedis\rdMail.cs" />
+    <Compile Include="DataRedis\rdMap.cs" />
+    <Compile Include="DataRedis\rdMission.cs" />
+    <Compile Include="DataRedis\rdMissionBase.cs" />
+    <Compile Include="DataRedis\rdOption.cs" />
+    <Compile Include="DataRedis\rdStat.cs" />
+    <Compile Include="DataRedis\rdLordInfo.cs" />
+    <Compile Include="fmStatEx.cs" />
+    <Compile Include="Battle\fmOption.cs" />
+    <Compile Include="Formula\theOptRangeDisplayer.cs" />
+    <Compile Include="Object\fmNotice.cs" />
+    <Compile Include="Object\fmOpInfo.cs" />
+    <Compile Include="Object\fmRanker.cs" />
+    <Compile Include="Object\fmSetEffect.cs" />
+    <Compile Include="Packet\Packet_DHeart.cs" />
+    <Compile Include="Packet\Packet_IAB.cs" />
+    <Compile Include="Packet\Packet_InDun.cs" />
+    <Compile Include="Packet\Packet_Op.cs" />
+    <Compile Include="Table\Base\DataLink.cs" />
+    <Compile Include="Table\Base\fmDataTable.cs" />
+    <Compile Include="Table\Base\fmDataTableLoader.cs" />
+    <Compile Include="Table\Base\fmLink.cs" />
+    <Compile Include="Table\fmDataDHeart.cs" />
+    <Compile Include="Table\fmDataDragonTomb.cs" />
+    <Compile Include="Table\fmDataDropValue.cs" />
+    <Compile Include="Table\fmDataExp.cs" />
+    <Compile Include="Table\fmDataExplore.cs" />
+    <Compile Include="Table\fmDataGameConst.cs" />
+    <Compile Include="Table\fmDataGoblin.cs" />
+    <Compile Include="Table\fmDataGood.cs" />
+    <Compile Include="Table\fmDataInDun.cs" />
+    <Compile Include="Table\fmDataItem.cs" />
+    <Compile Include="Table\fmDataMap.cs" />
+    <Compile Include="Table\fmDataMaze.cs" />
+    <Compile Include="Table\fmDataMission.cs" />
+    <Compile Include="Table\fmDataMonster.cs" />
+    <Compile Include="Table\fmDataOption.cs" />
+    <Compile Include="Table\fmDataPvpDummy.cs" />
+    <Compile Include="Table\fmDataSetEffect.cs" />
+    <Compile Include="Table\fmDataShop.cs" />
+    <Compile Include="Object\Base\fmObject.cs" />
+    <Compile Include="Object\Base\fmObjectExtend.cs" />
+    <Compile Include="Object\Base\fmObjectPool.cs" />
+    <Compile Include="Object\fmDiscovery.cs" />
+    <Compile Include="Object\fmDropItem.cs" />
+    <Compile Include="Object\fmGameConst.cs" />
+    <Compile Include="Object\fmWorld.cs" />
+    <Compile Include="Object\testObjcet.cs" />
+    <Compile Include="Packet\Base\eErrorCode.cs" />
+    <Compile Include="Table\Base\BufferCoder_fn.cs" />
+    <Compile Include="Table\fmDataXXX.cs" />
+    <Compile Include="Table\Base\BufferCoder.cs" />
+    <Compile Include="Table\Base\eFmDataType.cs" />
+    <Compile Include="Enum\Enum.cs" />
+    <Compile Include="Table\Base\fmData.cs" />
+    <Compile Include="Packet\Base\fmPacket.cs" />
+    <Compile Include="Packet\Base\fmPacketPool.cs" />
+    <Compile Include="Packet\Base\Packet.cs" />
+    <Compile Include="Packet\Base\PacketExtend.cs" />
+    <Compile Include="Packet\Base\PacketType.cs" />
+    <Compile Include="Packet\Packet_Archive.cs" />
+    <Compile Include="Packet\Packet_Auth.cs" />
+    <Compile Include="Packet\Packet_Broadcast.cs" />
+    <Compile Include="Packet\Packet_DTomb.cs" />
+    <Compile Include="Packet\Packet_Explore.cs" />
+    <Compile Include="Packet\Packet_Item.cs" />
+    <Compile Include="Packet\Packet_Lord.cs" />
+    <Compile Include="Packet\Packet_Maze.cs" />
+    <Compile Include="Packet\Packet_Mission.cs" />
+    <Compile Include="Packet\Packet_Rank.cs" />
+    <Compile Include="Packet\Packet_Shop.cs" />
+    <Compile Include="Packet\Packet_XXX.cs" />
+    <Compile Include="Formula\theFormula.cs" />
+    <Compile Include="Macro.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DataRedis\Base\RedisData.cs" />
+    <Compile Include="fmTemp.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
